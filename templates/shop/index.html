@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <title>Ecom</title>
+
+  <style>
+    .navbar-light .navbar-brand {
+      color: rgb(255 255 255 / 90%);
+    }
+
+    .navbar-light .navbar-nav .active>.nav-link,
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .nav-link.show,
+    .navbar-light .navbar-nav .show>.nav-link {
+      color: rgb(255 255 255 / 90%);
+    }
+
+
+
+
+    .navbar-light .navbar-nav .nav-link {
+      color: rgb(255 255 255);
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: rgb(172, 172, 238);
+    }
+
+
+
+    .col-md-3 {
+      display: inline-block;
+      margin-left: -4px;
+    }
+
+    .carousel-indicators .active {
+      background-color: blue;
+    }
+
+
+    .carousel-indicators .active {
+      background-color: blue;
+    }
+
+    .col-md-3 img {
+
+      width: 227px;
+      height: 242px;
+    }
+
+    body .carousel-indicator li {
+      background-color: blue;
+    }
+
+    body .carousel-indicators {
+      bottom: 0;
+    }
+
+    body .carousel-control-prev-icon,
+    body .carousel-control-next-icon {
+      background-color: blue;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      top: auto;
+      bottom: auto;
+      margin-top: -233px;
+    }
+
+
+    body .no-padding {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+
+    .carousel-item-next,
+    .carousel-item-prev,
+    .carousel-item.active {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .carousel-item {
+      position: relative;
+      display: none;
+      float: left;
+      width: 111%;
+      margin-right: -100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transition: -webkit-transform .6s ease-in-out;
+      transition: transform .6s ease-in-out;
+      transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
+    }
+
+    .row {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-right: 0px;
+      margin-left: 28px;
+    }
+
+    
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid rgba(0,0,0,.125);
+    border-radius: -2.75rem;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 9px;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 6rem;
+    padding: -0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+}
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light badge-dark" style="background-color: rgb(38 37 48 / 88%);">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+          <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+          <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+          <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+          <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+          <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+        </svg>
+      
+     <a class="navbar-brand" href="/shop/"><h3>ECOM</h3></a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+       
+        <li class="nav-item active">
+          <a class="nav-link" href="categories/">Categories<span class="sr-only">(current)</span></a>
+        </li>
+
+
+        <li class="nav-item active">
+          <a class="nav-link" href="about/">About Us <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="contact/">Contact Us <span class="sr-only">(current)</span></a>
+        </li>
+
+        <div class="ml-auto">
+      </ul>
+      
+
+      <ul class="navbar-nav">
+       <li class="nav-item active">
+          <a class="nav-link" href="Cart/">Cart<span class="sr-only">(current)</span></a>
+        </li>
+      {% if request.session.customer %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Welcome {{request.session.customer.first_name}}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="order/">Orders</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="signout/">Logout</a>
+          </div>
+        </li>
+
+      </ul>
+      {% else %}
+      <ul class="navbar-nav mr-20">
+        <li class="nav-item active">
+          <a class="nav-link" href="signup/">SignUp <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="login/">LogIn <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      {% endif %}
+    </div>
+    </div>
+  </nav>
+
+  {% load static %}
+
+
+
+
+  <div class="p-5 text-center bg-image" style="
+      background-image: url('{%static 'shop/5.jpg'%}');
+      height: 482px;
+    ">
+
+    <div class="container" style="margin-top: 353px;">
+     
+      
+      <p><a  type="button" class="btn btn-primary btn-rounded" href="categories/" role="button">Shop Now »</a></p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <br>
+  <br>
+  <br>
+
+  {% load cart %}
+
+  <div class="container">
+    <!--Slideshow starts here -->
+    {%for Products, range, nslides in allprods%}
+    <h3 class="my-4">{{Products.0.subcategory}}</h3>
+    <div id="demo{{forloop.counter}}" class="carousel slide my-3" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#demo{{forloop.counter}}" data-slide-to="0" class="active"></li>
+
+        {% for i in range %}
+        <li data-target="#demo{{forloop.parentloop.counter}}" data-slide-to="{{i}}"></li>
+        {% endfor %}
+      </ul>
+
+
+      <div class="container carousel-inner no-padding">
+
+        <div class="carousel-item active">
+
+
+
+          {% for product in Products %}
+          <div class="col-xs-3 col-sm-3 col-md-3">
+            <div class="card" id="{{product.id}}" style="width: 16rem;">
+              <img src='/media/{{product.img}}' class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{product.pro_name}}</h5>
+                <h5 class="card-title">₹{{product.price}}</h5>
+
+
+                <a href="/shop/products/{{product.id}}"><button id="qv{{product.id}}" type="button" class="btn btn-primary btn-rounded cart">Quick View</button></a>
+
+              </div>
+              <div class="card-footer p-0 no-gutters">
+                {% if product|is_in_cart:request.session.cart %}
+                <div class="row no-gutters">
+                  <form action="" method="POST">
+                    {% csrf_token %}
+                    <input hidden type="text" name="product" value="{{product.id}}">
+                    <input hidden type="number" name="remove" value="-1">
+                    <input type="submit" class="float-right btn btn-primary border btn-sm" value="-">
+                  </form>
+                  <div class="text-center col">{{ product|quantity_cart:request.session.cart }} in cart</div>
+                  <form action="" method="POST" class="col-2">
+                    {% csrf_token %}
+                    <input hidden type="text" name="product" value="{{product.id}}">
+                    <input type="submit" class="float-right btn btn-primary border btn-sm" value="+">
+                  </form>
+                </div>
+                {% else %}
+                <form action="/shop/#{{product.id}}" method="POST" class="btn-block">
+                  {% csrf_token %}
+                  <input hidden type="text" name="product" value="{{product.id}}">
+                  <input type="submit" class="float-right btn btn-light border form-control" value="Add To Cart">
+                </form>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
+        </div>
+        <div class="carousel-item">
+          {% endif %}
+
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- left and right controls for the slide -->
+    <a class="carousel-control-prev" href="#demo{{forloop.counter}}" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo{{forloop.counter}}" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+    {% endfor %}
+  </div>
+  <br>
+  <br>
+  <br>
+
+
+  <section class="py-0">
+    <div class="container-full">
+      <div class="row gutter-0">
+        <div class="col-md-6">
+          <div class="card card-tile">
+            <div class="p-5 text-center bg-image" style="
+      background-image: url('{%static 'shop/6.jpeg'%}');
+      height: 400px;
+    ">
+
+              <div class="container" style="margin-top: 124px;">
+                
+                
+                <p><a class="btn btn-primary btn-lg" href="/shop/categories/?category=4" role="button">ELECTRONICS</a></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+         <div class="col-md-6">
+          <div class="card card-tile">
+            <div class="p-5 text-center bg-image" style="
+      background-image: url('{%static 'shop/8.jpg'%}');
+      height: 400px;
+    ">
+
+              <div class="container" style="margin-top: 124px;">
+                
+                
+                <p><a class="btn btn-primary btn-lg" href="/shop/categories/?category=5" role="button">MEN'S CLOTHING</a></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+         <div class="col-md-6">
+          <div class="card card-tile">
+            <div class="p-5 text-center bg-image" style="
+      background-image: url('{%static 'shop/10.jpg'%}');
+      height: 400px;
+    ">
+
+              <div class="container" style="margin-top: 124px;">
+                
+                
+                <p><a class="btn btn-primary btn-lg" href="/shop/categories/?category=6" role="button">ACCESSORIES</a></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+         
+           <div class="col-md-6">
+          <div class="card card-tile">
+            <div class="p-5 text-center bg-image" style="
+      background-image: url('{%static 'shop/11.jpg'%}');
+      height: 400px;
+    ">
+
+              <div class="container" style="margin-top: 124px;">
+                
+                
+                <p><a class="btn btn-primary btn-lg" href="/shop/categories/?category=7" role="button">FOOTWEAR</a></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <br>
+  <br>
+  <br>
+
+  
+  
+
+
+
+
+  <br>
+  <br>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="container py-5" style="background-color: #f1f6f8;">
+    <div class="row">
+      <div class="col-12 col-md">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+          <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+          <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+          <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+          <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+          <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+        </svg>
+        <small class="d-block mb-3 text-muted"><a href="https://www.linkedin.com/in/vivek-singh-4059b91a8/">© Vivek singh</a></small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Categories</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="/shop/categories/?category=4">ELECTRONICS</a></li>
+          <li><a class="text-muted" href="/shop/categories/?category=5">MEN'S CLOTHING</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Categories</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="/shop/categories/?category=6">ACCESSORIES</a></li>
+          <li><a class="text-muted" href="/shop/categories/?category=7">FOOTWEAR</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Contact Us</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="/shop/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="/shop/about/">Team</a></li>
+          <li><a class="text-muted" href="https://www.linkedin.com/in/vivek-singh-4059b91a8/">website creator</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

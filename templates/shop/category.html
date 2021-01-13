@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <title>Ecom</title>
+
+  <style>
+    .navbar-light .navbar-brand {
+      color: rgb(255 255 255 / 90%);
+    }
+
+    .navbar-light .navbar-nav .active>.nav-link,
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .nav-link.show,
+    .navbar-light .navbar-nav .show>.nav-link {
+      color: rgb(255 255 255 / 90%);
+    }
+
+
+
+
+    .navbar-light .navbar-nav .nav-link {
+      color: rgb(255 255 255);
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: rgb(172, 172, 238);
+    }
+
+    .card {
+      border-radius: 10px;
+      box-shadow: -20px 20px 30px #d6d6d6,
+        20px -20px 30px #ffffff;
+    }
+
+
+    .col-md-3 {
+      display: inline-block;
+      margin-left: -4px;
+    }
+
+    .carousel-indicators .active {
+      background-color: blue;
+    }
+
+
+    .carousel-indicators .active {
+      background-color: blue;
+    }
+
+    .col-md-3 img {
+
+      width: 227px;
+      height: 242px;
+    }
+
+    body .carousel-indicator li {
+      background-color: blue;
+    }
+
+    body .carousel-indicators {
+      bottom: 0;
+    }
+
+    body .carousel-control-prev-icon,
+    body .carousel-control-next-icon {
+      background-color: blue;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      top: auto;
+      bottom: auto;
+    }
+
+
+    body .no-padding {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+
+    .carousel-item-next,
+    .carousel-item-prev,
+    .carousel-item.active {
+      display: flex;
+      flex-direction: row;
+    }
+
+   
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light badge-dark" style="background-color: rgb(38 37 48 / 88%);">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+          <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+          <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+          <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+          <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+          <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+        </svg>
+      
+     <a class="navbar-brand" href="/shop/"><h3>ECOM</h3></a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/shop/">Home <span class="sr-only">(current)</span></a>
+        </li>
+       
+        <li class="nav-item active">
+          <a class="nav-link" href="categories/">Categories<span class="sr-only">(current)</span></a>
+        </li>
+
+
+        <li class="nav-item active">
+          <a class="nav-link" href="/shop/about/">About Us <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="/shop/contact/">Contact Us <span class="sr-only">(current)</span></a>
+        </li>
+
+        <div class="ml-auto">
+      </ul>
+      
+
+      <ul class="navbar-nav">
+       <li class="nav-item active">
+          <a class="nav-link" href="/shop/Cart/">Cart<span class="sr-only">(current)</span></a>
+        </li>
+      {% if request.session.customer %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Welcome {{request.session.customer.first_name}}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/shop/order/">Orders</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/shop/signout/">Logout</a>
+          </div>
+        </li>
+
+      </ul>
+      {% else %}
+      <ul class="navbar-nav mr-20">
+        <li class="nav-item active">
+          <a class="nav-link" href="/shop/signup/">SignUp <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="/shop/login/">LogIn <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      {% endif %}
+    </div>
+    </div>
+  </nav>
+
+  {% load static %}
+
+
+  
+
+
+  <br>
+  <br>
+  <br>
+  
+  {% load cart %}
+
+
+  <div class="container-fluid mt-3">
+    <div class="row">
+
+
+      <!-- filter -->
+
+      <div class="col-lg-3 mx-auto">
+        <div class="list-group">
+
+          <a href="/shop/categories/" class="list-group-item list-group-item-action">All Products</a>
+
+          {% for category in catprods %}
+          <a href="?category={{category.id}}" class="list-group-item list-group-item-action">{{category.name}}</a>
+          {% endfor %}
+        </div>
+      </div>
+
+
+      <div id='products' class="col-lg-9 mx-auto">
+        <div class="row mx-auto">
+
+
+
+          {% for product in prod %}
+
+          <div class="card mx-auto mb-3" id="{{product.id}}" style="width: 18rem;">
+            <img src='/media/{{product.img}}' class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{product.pro_name}}</h5>
+              <h5 class="card-title">₹{{product.price}}</h5>
+              
+
+              <a href="/shop/products/{{product.id}}"><button id="qv{{product.id}}" class="btn btn-primary cart">Quick View</button></a>
+
+            </div>
+            <div class="card-footer p-0 no-gutters">
+              {% if product|is_in_cart:request.session.cart %}
+              <div class="row no-gutters">
+                <form action="" method="POST">
+                  {% csrf_token %}
+                  <input hidden type="text" name="product" value="{{product.id}}">
+                  <input hidden type="number" name="remove" value="-1">
+                  <input type="submit" class="float-right btn btn-primary border btn-sm" value="-">
+                </form>
+                <div class="text-center col">{{ product|quantity_cart:request.session.cart }} in cart</div>
+                <form action="" method="POST" class="col-2">
+                  {% csrf_token %}
+                  <input hidden type="text" name="product" value="{{product.id}}">
+                  <input type="submit" class="float-right btn btn-primary border btn-sm" value="+">
+                </form>
+              </div>
+              {% else %}
+              <form action="/shop/categories/#{{product.id}}" method="POST" class="btn-block">
+                {% csrf_token %}
+                <input hidden type="text" name="product" value="{{product.id}}">
+                <input type="submit" class="float-right btn btn-light border form-control" value="Add To Cart">
+              </form>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+
+
+        </div>
+      </div>
+
+
+
+      
+
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+    <footer class="container py-5" style="background-color: #f1f6f8;">
+      <div class="row">
+        <div class="col-12 col-md">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+            <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+            <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+            <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+            <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+            <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+          </svg>
+          <small class="d-block mb-3 text-muted"><a href="https://www.linkedin.com/in/vivek-singh-4059b91a8/">© Vivek singh</a></small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Categories</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="/shop/categories/?category=4">ELECTRONICS</a></li>
+            <li><a class="text-muted" href="/shop/categories/?category=5">MEN'S CLOTHING</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Categories</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="/shop/categories/?category=6">ACCESSORIES</a></li>
+            <li><a class="text-muted" href="/shop/categories/?category=7">FOOTWEAR</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="/shop/contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="/shop/about/">Team</a></li>
+            <li><a class="text-muted" href="https://www.linkedin.com/in/vivek-singh-4059b91a8/">website creator</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
